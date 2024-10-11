@@ -1,0 +1,245 @@
+html,body{
+    max-width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #0f0f0f;
+    scroll-behavior: smooth;
+}
+/*Personalização Do cabecalho*/
+.cabecalho-css{
+    background-color:#990002 ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+/*Texto da logo*/
+.logo-css{
+    display: flex;
+    width: 15%;
+}
+.logo-txt{
+  color: white;
+  position: absolute;
+  left: 12.5%;
+  font-size: 17px;
+  width: 5%;
+}
+
+.imagem-css{
+    width: 40%;
+}
+
+select{
+    background-color: #e8e8e8;
+    color: #212121;
+    font-size: 17px;
+    width: 200px;
+    border: 0;
+    border-radius: 10px;
+    padding: 13px;
+}
+
+option{
+    color: #380401;
+    background-color: white;
+}
+
+/*Personalização do botao*/
+.button-header{
+    text-decoration: none;
+    color: #212121;
+    width: 200px;
+    background-color: #e8e8e8;
+    padding: 13px;
+    margin-left: 10px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.button-header:hover{
+    border: solid 2px white;
+    background-color: #f7b800;
+    color: #380401;
+    -webkit-box-shadow: 0px 0px 24px 0px rgb(228, 149, 103);
+    -moz-box-shadow: 0px 0px 24px 0px rgb(228, 149, 103);
+    box-shadow: 0px 0px 24px 0px rgb(228, 149, 103);
+}
+
+/* Personalização da imagem do usuario*/            
+.imagem-usuario-formato{
+  border-radius: 50%;
+  width: 30%;
+  float: right;
+  transition: 0.3s;
+
+}
+/* Posiçao da imagem do usuario*/
+.imagem-usuario{
+width: 15%;
+}
+
+.imagem-usuario-formato:hover{
+  border: solid 2px white;
+  transform:scale(1.1);
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(255,255,255,1);
+  box-shadow: 0px 0px 24px 0px rgba(255,255,255,1);
+}
+
+.footer{
+  background-color: #990002;
+  width: 100%;
+  height: 300px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer h2{
+  color: #e8e8e8;
+  text-align: center;
+}
+
+.redes-sociais{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social{
+display: flex;
+}
+
+.contato{
+  width: 33.3%;
+}
+
+.empresa{
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redes-sociais{
+  width: 33.3%;
+}
+
+
+.social a{
+  color: #e8e8e8;
+  font-size: 50px;
+  margin: auto;
+  padding: 50px;
+  transition: 0,3s;
+}
+
+.social a:hover{
+  transform: scale(1.2);
+
+}
+
+.img-empresa{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contacts{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact{
+    text-decoration: none;
+    color: #e8e8e8;
+    margin: auto;
+    padding: 25px;
+  }
+
+.aba-gravacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px;
+}
+
+.topico-gravacoes{
+    width: 85%;
+    height: 375px;
+    background-color: #e8e8e8;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.capa-film{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch-ab{
+  width: 450px;
+  height: 252.5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #e8e8e8;
+  font-size: 75px;
+  position: absolute;
+  border: none;
+  transition: 0.3s;
+
+  cursor: pointer;
+  text-align: center;
+}
+
+.play{
+  transition: 0.3s;
+}
+
+.watch-ab:hover .play{
+  transform: scale(1.3);
+}
+
+.watch-ab:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.film-img{
+    width: 450px;
+    background-color: #212121;
+    border: 10px solid #cacaca;
+}
+
+.describe-film{
+    width: 55%;
+}
+
+.describe-txt{
+    height: 60%;
+}
+
+.download-btn{
+  border: none;
+  font-size: 40px;
+  color: #212121;
+  float: right;
+  transition: 0.3s;
+  background-color: transparent;
+}
+
+.download-btn:hover{
+  transform: scale(1.2);
+  color: #990002;
+}

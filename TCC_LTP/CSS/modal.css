@@ -1,0 +1,184 @@
+.profileModal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.0); /* Black w/ opacity */
+    
+}
+
+.profile_content{
+    background-color: #fefefe;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 0 0 15px 15px;
+    width: 25%; /* Could be more or less, depending on screen size */
+    height: 150px;
+
+    margin-top: 100px;
+}
+
+.image-prof{
+    width: 119px;
+    height: 119px;
+}
+
+.image-profile{
+    width: 80%;
+}
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.usernameText{
+    font-size: 25px;
+}
+
+.cadastroModal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.cadastro_content{
+    background-color: #990002;
+    padding: 20px;
+    border-radius: 15px;
+    width: 35%; /* Could be more or less, depending on screen size */
+}
+
+.titleCad{
+    text-align: center;
+    color: #e8e8e8;
+}
+
+.cadastroForm{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+label{
+    color: #e8e8e8;
+}
+
+hr{
+    width: 100%;
+}
+
+.inputCadastro{
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.inputButton{
+    padding: 15px;
+    background-color: #212121;
+    color: #e8e8e8;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.linkLogin{
+    text-decoration: none;
+    color: #e8e8e8;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+}
+
+.alink{
+    text-decoration: none;
+    color: #e8e8e8;
+}
+
+.fade{
+    animation: fadein 0.4s;
+}
+
+.fadeo{
+    animation: fadeout 0.4s;
+}
+
+@keyframes fadein{
+    from { opacity: 0; margin-top: -30px; }
+    to   { opacity: 1; margin-top: 0; }
+}
+
+@keyframes fadeout{
+    from { opacity: 1; margin-top: 0; }
+    to   { opacity: 0; margin-top: -10px;}
+}
+
+.loginModal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.login_content{
+    background-color: #990002;
+    padding: 20px;
+    border-radius: 15px;
+    width: 35%; 
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+.btn_style{
+    padding: 10px;
+    width: 120px;
+    font-size: 15px;
+    border: none;
+    margin-bottom: 5px;
+    background-color: #990002;
+    color: #e8e8e8;
+    border-radius: 5px;
+}
+
+.btn_style.t2{
+    display: none;
+}
+
+.showPassword{
+    position: relative;
+    left: 90%;
+    margin-top: -42.5px;
+    margin-bottom: 45px;
+    cursor: pointer;
+}

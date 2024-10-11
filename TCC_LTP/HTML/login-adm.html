@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo do web site-->
+    <title>Administrador</title>
+
+    <!-- Icones da internet-->
+    <script src="https://kit.fontawesome.com/a1b6c149c0.js" crossorigin="anonymous"></script>
+
+    <!-- Link para o arquivo de css da página -->
+    <link rel="stylesheet" href="../CSS/style-login-admin.css">
+
+    <!-- Link para o ícone da logo na aba da página-->
+    <link rel="shortcut icon" href="../imagem/logo_vetor_.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="loginModal">
+        <!-- Conteúdo do Modal-->
+        <div class="login_content">
+            <!-- Título do Modal -->
+            <h2 class="titleCad">Login</h2>
+  
+            <!-- Formulário para o login da conta -->
+            <form action="#" method="post" class="loginForm">
+                <!-- Email do Usuário -->
+                <label for="#">Email:</label>
+                <input type="email" name="emailVar" id="emailLog" class="inputCadastro" placeholder="Digite Aqui" maxlength="128" required>
+                <!-- Senha do Usuário-->
+                <label for="#">Senha:</label>
+                <input type="password" name="senhaVar" id="passwordLog" class="inputCadastro" placeholder="Digite aqui" maxlength="32" required> 
+                <!-- Código de Verificação-->
+                <label for="#">Código de Verificação:</label>
+                <input type="password" name="senhaVar" id="passwordLog" class="inputCadastro" placeholder="Digite aqui" maxlength="6" required>
+                <!-- Botão que revela a senha para o Usuário -->
+                <i class="fa-solid fa-eye showPassword" onclick="showPassword()"></i>
+                <hr>
+                <!-- Botão que loga o usuário, comparando os dados com o banco de dados -->
+                <input type="submit" value="Login" class="inputButton">
+            </form>
+        </div>
+     </div>
+</body>
+</html>

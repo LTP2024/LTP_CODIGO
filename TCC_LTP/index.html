@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo do web site-->
+    <title>Luz! Teatro! Play!</title>
+
+    <!-- Icones da internet-->
+    <script src="https://kit.fontawesome.com/a1b6c149c0.js" crossorigin="anonymous"></script>
+
+    <!-- Link para o arquivo de css da página -->
+    <link rel="stylesheet" href="style-index.css">
+
+    <!-- Link para o arquivo de css dos modals da página -->
+    <link rel="stylesheet" href="CSS/modal.css">
+
+    <!-- Link para o ícone da logo na aba da página-->
+    <link rel="shortcut icon" href="imagem/logo_vetor_.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Cabeçalho do website-->
+    <header>
+        <div class="cabecalho-css">
+            <!-- Logo do produto Luz! Teatro! Play! -->
+            <div class="logo-css">
+                <!-- Imagem da Empresa -->
+                <a href="index.html">
+                    <img src="imagem/logo(vetor).svg" alt="#" class="imagem-css">
+                </a>
+
+                <!-- Título da empresa -->
+                <p class="logo-txt">Luz! Teatro! Play!</p>
+            </div>
+
+            <!-- Botoes de encaminhamento-->
+            <div class="topico-css">
+                <!-- Nav onde ficará localizado os botões-->
+                <nav>
+                    <a href="HTML/gravacoes.php" class="button-header">Gravações</a>
+                    <a href="#not" class="button-header">Noticias de artes</a>
+                    <a href="HTML/assinatura.html" class="button-header">Assinatura</a>
+                    <a href="HTML/about.html" class="button-header">Sobre nós</a>
+                </nav>
+            </div>
+            <!-- Script que executa os modals de login e cadastro -->
+            <script src="JAVASCRIPT/modal.js"></script>
+            <!-- Imagem do usuario -->
+            <div class="imagem-usuario" onclick="openModal()">
+                <img src="imagem/user.svg" alt="userimage" class="imagem-usuario-formato">
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal do perfil -->
+    <div id="profileModal" class="profileModal">
+        <div class="profile_content">
+            <!-- Nome do Usuário e imagem -->
+            <div class="image-prof">
+                <img src="imagem/user.svg" alt="userphoto" class="image-profile">
+            </div>
+
+            <!-- Botões do modal -->
+            <div class="btn">
+                <p class="username">Olá! <!--  <?= $username ?> -->João Vitor!</p>
+
+                <!-- Botão de cadastrar -->
+                <button id="profileCad" class="btn_style t1" onclick="cadastro()"> Cadastrar </button>
+                
+                <!-- Botão de Logar -->
+                <button id="profileLogin" class="btn_style t1" onclick="login()"> Logar </button>
+                
+                <!-- Botão de Deslogar, ela só aparece caso o sistema estiver logado a uma conta -->
+                <button name="profileLogout" class="btn_style t2"> Desconectar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro -->
+    <div id="cadastroModal" class="cadastroModal">
+        <!-- Conteúdo do Modal-->
+        <div class="cadastro_content">
+            <!-- Título do Modal -->
+            <h2 class="titleCad">Cadastro</h2>
+
+            <!-- Formulário para o cadastro da conta -->
+            <form action="insere.php" method="post" class="cadastroForm">
+                <!-- Nome de Usuário -->
+                <label for="#">Nome de Usuário:</label>
+                <input type="text" name="nameVar" id="nameCad" class="inputCadastro" placeholder="Digite Aqui" maxlength="32" required> 
+                <!-- Email do Usuário -->
+                <label for="#">Email:</label>
+                <input type="email" name="emailVar" id="emailCad" class="inputCadastro" placeholder="Digite aqui" maxlength="128" required>
+                <!-- Senha do Usuário-->
+                <label for="#">Senha:</label>
+                <input type="password" name="senhaVar" id="passwordCad" class="inputCadastro" placeholder="Digite aqui" maxlength="32" required>
+                <!-- Botão que revela a senha para o Usuário -->
+                <i class="fa-solid fa-eye showPassword" onclick="showPassword()"></i>
+                <hr>
+                <!-- Botão que cadastra o usuário, enviando os dados acima para o Banco de dados -->
+                <input type="submit" value="Cadastrar" class="inputButton">
+                <!-- Caso o usuário já possuir uma conta e clicar no botão abaixo, ir para o Modal de Login -->
+                <p class="linkLogin" onclick="login()">Já possui conta? Entre aqui!</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Login-->
+     <div id="loginModal" class="loginModal">
+        <!-- Conteúdo do Modal-->
+        <div class="login_content">
+            <!-- Título do Modal -->
+            <h2 class="titleCad">Login</h2>
+
+            <!-- Formulário para o login da conta -->
+            <form action="#" method="post" class="loginForm">
+                <!-- Email do Usuário -->
+                <label for="#">Email:</label>
+                <input type="email" name="emailVar" id="emailLog" class="inputCadastro" placeholder="Digite Aqui" maxlength="128" required>
+                <!-- Senha do Usuário-->
+                <label for="#">Senha:</label>
+                <input type="password" name="senhaVar" id="passwordLog" class="inputCadastro" placeholder="Digite aqui" maxlength="32" required>
+                <!-- Botão que revela a senha para o Usuário -->
+                <i class="fa-solid fa-eye showPassword" onclick="showPassword()"></i>
+                <hr>
+                <!-- Botão que loga o usuário, comparando os dados com o banco de dados -->
+                <input type="submit" value="Login" class="inputButton">
+                <!-- Caso o usuário não possuir uma conta e clicar no botão abaixo, ir para o Modal de Cadastro -->
+                <p class="linkLogin"> <a href="HTML/recuperacao.html" class="alink">Esqueceu a senha? Clique aqui</a></p>
+            </form>
+        </div>
+     </div>
+
+    <!-- Principal do site -->
+    <main>
+        <!-- Conteudo do sistema-->
+        <div class="info-tab">
+            <!-- Título -->
+            <div class="info-title">
+                <h1>Novidades do Dia</h1>
+            </div>
+            <div class="info-tab-content">
+                <!-- Informação do video-->
+                <div class="video-info">
+                    <!-- Título -->
+                    <h3 class="video-title">O Grande Ditador</h3>
+                    <video src="imagem/charlie.mp4" class="video"></video>
+                </div>
+                <div class="info-text">
+                    <!-- Título -->
+                    <h2>O Grande Ditador</h2>
+                    <!-- Sinopse do Filme -->
+                    <p class="describe-film">Depois de um serviço dedicado na Grande Guerra, um barbeiro judeu e das suas políticas anti-semitas. Quando o barbeiro, que tem uma semelhança notável com Hynkel, retorna ao seu bairro tranquilo, ele fica surpreso com as mudanças brutais e de forma imprudente se junta a uma linda garota e seus vizinhos na rebelião.
+                    </p>
+                    <!-- Tipo do Filme -->
+                    <p>Tipo:Comédia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assinaturas -->
+        <div class="signature-css">
+            <h1 class="signature-title">Assinaturas</h1>
+        </div>
+        <!-- Abas de assinatura -->
+        <div class="signature">
+            <!-- Aba da assinatura simples -->
+            <div class="signature-simple">
+                <!-- Informações sobre o Plano Premium -->
+                <div class="simple-info">
+                    <div class="signature-type">
+                        <i class="fa-solid fa-film" id="signature-icon"></i>
+                        <h2>Plano Padrão</h2>
+                    </div>
+                    <!-- Benefícios da Assinatura Simples-->
+                    <div class="signature-text">
+                        <!-- Tabela com os benefícios -->
+                        <table>
+                            <!-- Não contém anuncios -->
+                            <tr>
+                                <td>Contém anúncios (menos do que você pensa)</td>
+                            </tr>
+                            <!-- Gravações em alta qualidade -->
+                            <tr>
+                                <td>Gravações em alta qualidade</td>
+                            </tr>
+                            <!-- Enquetes -->
+                            <tr>
+                                <td>Enquetes</td>
+                            </tr>
+                            <!-- Jogos Teatrais -->
+                            <tr>
+                                <td>Jogos Teatrais</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- Imagem da assinatura padrão-->
+                <div class="img">
+                    <img src="imagem/test1.jpg" class="simples-img" alt="#">
+                </div>
+            </div>
+    
+            <!-- Aba da Assinatura Premium-->
+            <div class="signature-premium">
+                <!-- Informações sobre o Plano Premium -->
+                <div class="simple-info">
+                    <!-- Título da Sinatura -->
+                    <div class="signature-type">
+                        <i class="fa-solid fa-masks-theater" id="signature-icon"></i>
+                        <h2>Plano Premium</h2>
+                    </div>
+
+                    <!-- Benefícios da Sinatura -->
+                    <div class="signature-text">
+                        <!-- Tabela com os Benefícios -->
+                        <table>
+                            <!-- Não contém Anúncio -->
+                            <tr>
+                                <td>Não contém anúncios</td>
+                            </tr>
+                            <!-- Catálogo Ilimitado -->
+                            <tr>
+                                <td>Catálogo ilimitado</td>
+                            </tr>
+                            <!-- Gravações em alta qualidade -->
+                            <tr>
+                                <td>Gravações em alta qualidade</td>
+                            </tr>
+                            <!-- Enquentes -->
+                            <tr>
+                                <td>Enquetes</td>
+                            </tr>
+                            <!-- Jogos Teatrais -->
+                            <tr>
+                                <td>Jogos Teatrais</td>
+                            </tr>
+                            <!-- Gravações Extras (Entrevistas e bastidores )-->
+                            <tr>
+                                <td>Gravações extras(entrevistas e bastidores)</td>
+                            </tr>
+                            <!-- Download de Roteiros Teatrais -->
+                            <tr>
+                                <td>Download de roteiros teatrais</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- Imagem ao lado dos benefícios da assinatura -->
+                <div class="img">
+                    <img src="imagem/test2.jpg" class="simples-img" alt="#">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Notícias -->
+    <div class="notice-css" id="not">
+        <!--Titulo-->
+        <h1 class="notice-title"> Notícias </h1>
+        <div class="notice-content">
+            <!--Conteudo da Noticia-->
+            <div class="describe-content">
+                <h2> Morte de Charlie Chaplin</h2>
+                <p class="notice-describe">Charles Chaplin viveu os seus últimos anos na Suíça, e, a partir da década de 1970, sua saúde começou a declinar. A situação se tornou crítica a partir de 1977, quando ele passou a necessitar de cuidado médico diário. Em 25 de dezembro de 1977, Charles Chaplin teve um AVC fatal enquanto dormia.</p>
+                <!--Aba onde contém os botões para troca de noticias-->
+                <div class="btn_next">
+                    <!--Onde está o botão esquerdo-->
+                    <button class="btn_arrow">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <!-- Onde está o botao direito-->
+                    <button class="btn_arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Filme da Noticia-->
+            <div class="film-content">
+                <img src="imagem/test3.jpg" alt="imagem_exemplo" class="film-image">
+                <p class="describe-film"> Ultima imagem de Charles Chaplin em suas gravaçoes</p>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!--Rodapé-->
+    <div class="footer">
+        <!--Parte onde se encontra os contatos-->
+        <div class="contato">
+            <h2> Contatos</h2>
+            <div class="contacts">
+                <a href="mailto:luzteatro2024@gmail.com" class="contact"><i class="fa-solid fa-envelope"></i>luzteatro2024@gmail.com </a>
+                <a href="+5535991954109" class="contact"><i class="fa-solid fa-phone"> </i> 35 99195-4109</a>
+            </div>
+        </div>
+        <!-- Parte onde se encontra a logo da empresa-->
+        <div class="empresa">
+            <h2> Empresa desenvolvedora</h2>
+            <img src="imagem/logo.png" alt="empresa" class="img-empresa">
+
+        </div>
+        <!-- Parte onde se encontra as redes sociais-->
+        <div class="redes-sociais">
+            <h2> Redes Sociais</h2>
+            <div class="social">
+                <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="#"> <i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
